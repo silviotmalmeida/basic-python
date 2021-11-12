@@ -1,5 +1,8 @@
 # trata-se da implementação de um jogo de adivinhação, tipo forca
 
+# importando a biblioteca para checagem de números
+import checkNumbers
+
 # obtem a palavra secreta do jogador 1
 palavra_secreta = 'panela'.upper()
 
@@ -19,31 +22,31 @@ while True:
     if chances <= 0:
         
         # envia a mensagem
-        print('Jogador 2 - Você perdeu!!!')
+        print('Você perdeu!!!')
         print()
         
         # encerra o jogo
         break
 
     # obtem a sugestão de letra
-    letra = input('Jogador 2 - Digite uma letra: ').upper()
+    letra = input('Digite uma letra: ').upper()
 
     # validando a entrada da sugestão de letra
     # se o tamanho for maior que 1
     if len(letra) > 1:
         
         # envia mensagem
-        print('Jogador 2 - Digite apenas uma letra.')
+        print('Digite apenas uma letra.')
         print()
             
         # passa para a próxima iteração
         continue
     
     # se for número
-    if letra.isnumeric():
+    if checkNumbers.is_number(letra):
         
         # envia mensagem
-        print('Jogador 2 - Digite apenas letras.')
+        print('Digite apenas letras.')
         print()
         
         # passa para a próxima iteração
@@ -52,7 +55,7 @@ while True:
     # se já estiver sido digitada
     if letra in digitadas:
         # envia mensagem
-        print('Jogador 2 - Esta letra já foi digitada anteriormente.')
+        print('Esta letra já foi digitada anteriormente.')
         print()
     
         # passa para a próxima iteração
@@ -106,6 +109,7 @@ while True:
         
         # envia mensagem
         print(f'Que legal, VOCÊ GANHOU!!! A palavra era {secreto_temporario}.')
+        print('')
         
         # encerra o jogo
         break
@@ -115,6 +119,7 @@ while True:
         
         #exibe a palavra secreta parcial
         print(f'A palavra secreta está assim: {secreto_temporario}')
+        print('')
 
     # exibe uma linha em branco para a próxima iteração
     print()
