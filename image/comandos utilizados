@@ -1,0 +1,13 @@
+sudo docker run -it ubuntu:20.04
+
+    apt update
+
+    apt install python3.8 python3.8-dev python3.8-venv \
+        python3-venv idle-python3.8 python3-pip virtualenv gcc \
+        default-libmysqlclient-dev libssl-dev -y
+
+    exit
+
+sudo docker commit (id do container obtido em sudo docker ps -a) basic-python
+
+sudo docker save basic-python > basic-python.tar
