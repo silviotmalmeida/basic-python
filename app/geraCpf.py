@@ -3,22 +3,21 @@
 # importando o gerador de números aleatórios
 from random import randint
 
-# laço para evitar geracao de números repetidos
+# laço para gerar aleatoriamente os nove primeiros dígitos do cpf
 while True:
     # obtendo os nove primeiros dígitos do CPF para calcular os demais
-    cpf = str(randint(100000000, 999999999))
-    
-    # se for repetição
-    if not cpf == (cpf[0] * 11):
-        break
+    # inicializando o cpf vazio
+    cpf = ''
 
-# se for repetição
-if cpf == (cpf[0] * 11):
-    
-    # envia mensagem de erro
-    print(f'CPF {cpf} NÃO é válido!')
-    print()
-    exit()
+    # laço para popular os nove primeiros dígitos
+    for x in range(9):
+        # populando aleatoriamente os nove primeiros dígitos
+        cpf += str(randint(0, 9))
+
+    # se nao for repetição
+    if not cpf == (cpf[0] * 9):
+        # sai do laço
+        break
 
 # laço para cálculo do primeiro dígito
 # iniciando o acumulador
@@ -29,13 +28,13 @@ multiplicador = 10
 
 # iterando sobre os nove primeiros dígitos
 for digito in cpf:
-    
+
     # incrementando o acumulador com o produto do dígito e multiplicador
     soma += int(digito) * multiplicador
-    
+
     # decrementando o multiplicador para a próxima iteração
     multiplicador -= 1
-    
+
 # calculando o primeiro dígito
 primeiro_digito = (11 - (soma % 11))
 
@@ -54,10 +53,10 @@ multiplicador = 11
 
 # iterando sobre o cpf validado
 for digito in cpf:
-    
+
     # incrementando o acumulador com o produto do dígito e multiplicador
     soma += int(digito) * multiplicador
-    
+
     # decrementando o multiplicador para a próxima iteração
     multiplicador -= 1
 

@@ -9,7 +9,7 @@ cpf = input('Digite o CPF sem pontos ou traço: ')
 # validando a entrada
 # se o tamanho for maior que 1
 if len(cpf) != 11:
-    
+
     # envia mensagem
     print('O CPF deve conter 11 números')
     print()
@@ -17,31 +17,31 @@ if len(cpf) != 11:
 
 # se for número
 if not checkNumbers.is_number(cpf):
-    
+
     # envia mensagem
     print('Digite apenas números.')
     print()
     exit()
-    
+
 # se conter traço
 if '-' in cpf:
-    
+
     # envia mensagem
     print('Digite apenas números.')
     print()
     exit()
-    
+
 # se conter ponto
 if '.' in cpf:
-    
+
     # envia mensagem
     print('Digite apenas números.')
     print()
     exit()
-    
+
 # se for repetição
 if cpf == (cpf[0] * 11):
-    
+
     # envia mensagem de erro
     print(f'CPF {cpf} NÃO é válido!')
     print()
@@ -59,13 +59,13 @@ multiplicador = 10
 
 # iterando sobre os nove primeiros dígitos
 for digito in cpf_validado:
-    
+
     # incrementando o acumulador com o produto do dígito e multiplicador
     soma += int(digito) * multiplicador
-    
+
     # decrementando o multiplicador para a próxima iteração
     multiplicador -= 1
-    
+
 # calculando o primeiro dígito
 primeiro_digito = (11 - (soma % 11))
 
@@ -84,10 +84,10 @@ multiplicador = 11
 
 # iterando sobre o cpf validado
 for digito in cpf_validado:
-    
+
     # incrementando o acumulador com o produto do dígito e multiplicador
     soma += int(digito) * multiplicador
-    
+
     # decrementando o multiplicador para a próxima iteração
     multiplicador -= 1
 
@@ -102,14 +102,14 @@ cpf_validado += str(segundo_digito)
 
 # se o cpf fpr igual ao cpf validado
 if cpf == cpf_validado:
-    
+
     # envia mensagem de sucesso
     print(f'CPF {cpf} é válido!')
     print('')
 
 # senão
 else:
-    
+
     # envia mensagem de erro
     print(f'CPF {cpf} NÃO é válido!')
     print('')
