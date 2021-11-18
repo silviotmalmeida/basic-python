@@ -1,6 +1,9 @@
 # importando as dependências
 import os
 
+# envia mensagem de início
+print('Iniciando...')
+
 # definindo a localização deste arquivo python
 __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
