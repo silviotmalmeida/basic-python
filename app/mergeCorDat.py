@@ -10,9 +10,6 @@ __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file
 # abrindo o arquivo CHESF para leitura
 fileIn = open(os.path.join(__location__, 'corCHESF.dat'))
 
-# armazenando o conteúdo do arquivo em um array
-lines = fileIn.readlines()
-
 # inicializando o array de cores
 colors = []
 
@@ -20,7 +17,7 @@ colors = []
 color = {}
 
 # iterando sobre as linhas do arquivo
-for line in lines:
+for line in fileIn:
 
     # separando os dados em um array chave valor
     data = line.split('=')
@@ -71,14 +68,11 @@ for line in lines:
 # abrindo o arquivo CEPEL para leitura
 fileIn = open(os.path.join(__location__, 'corCEPEL.dat'))
 
-# armazenando o conteúdo do arquivo em um array
-lines = fileIn.readlines()
-
 # inicializando o dicionário de cada cor
 color = {}
 
 # iterando sobre as linhas do arquivo
-for line in lines:
+for line in fileIn:
 
     # separando os dados em um array chave valor
     data = line.split('=')
