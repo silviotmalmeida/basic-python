@@ -28,37 +28,37 @@ for line in fileIn:
         color[data[0].strip()] = data[1].strip()
 
     # se a chave for ORDEM
-    if data[0].strip() == 'ORDEM':
+    elif data[0].strip() == 'ORDEM':
         # registra no dicionário
         color[data[0].strip()] = data[1].strip()
 
     # se a chave for COR_PERCENT_R
-    if data[0].strip() == 'COR_PERCENT_R':
+    elif data[0].strip() == 'COR_PERCENT_R':
         # registra no dicionário
         color[data[0].strip()] = data[1].strip()
 
     # se a chave for COR_PERCENT_G
-    if data[0].strip() == 'COR_PERCENT_G':
+    elif data[0].strip() == 'COR_PERCENT_G':
         # registra no dicionário
         color[data[0].strip()] = data[1].strip()
 
     # se a chave for COR_PERCENT_B
-    if data[0].strip() == 'COR_PERCENT_B':
+    elif data[0].strip() == 'COR_PERCENT_B':
         # registra no dicionário
         color[data[0].strip()] = data[1].strip()
 
     # se a chave for BLINK
-    if data[0].strip() == 'BLINK':
+    elif data[0].strip() == 'BLINK':
         # registra no dicionário
         color[data[0].strip()] = data[1].strip()
 
     # se a chave for COR_BLINK
-    if data[0].strip() == 'COR_BLINK':
+    elif data[0].strip() == 'COR_BLINK':
         # registra no dicionário
         color[data[0].strip()] = data[1].strip()
 
     # se a chave for COR e o dicionário estiver totalmente populado
-    if data[0].strip() == 'COR' and len(color) >= 5:
+    elif data[0].strip() == 'COR' and len(color) >= 5:
         # insere a cor no array de cores
         colors.append(color)
         # reinicia o dicionário de cor
@@ -83,37 +83,37 @@ for line in fileIn:
         color[data[0].strip()] = data[1].strip()
 
     # se a chave for ORDEM
-    if data[0].strip() == 'ORDEM':
+    elif data[0].strip() == 'ORDEM':
         # registra no dicionário
         color[data[0].strip()] = data[1].strip()
 
     # se a chave for COR_PERCENT_R
-    if data[0].strip() == 'COR_PERCENT_R':
+    elif data[0].strip() == 'COR_PERCENT_R':
         # registra no dicionário
         color[data[0].strip()] = data[1].strip()
 
     # se a chave for COR_PERCENT_G
-    if data[0].strip() == 'COR_PERCENT_G':
+    elif data[0].strip() == 'COR_PERCENT_G':
         # registra no dicionário
         color[data[0].strip()] = data[1].strip()
 
     # se a chave for COR_PERCENT_B
-    if data[0].strip() == 'COR_PERCENT_B':
+    elif data[0].strip() == 'COR_PERCENT_B':
         # registra no dicionário
         color[data[0].strip()] = data[1].strip()
 
     # se a chave for BLINK
-    if data[0].strip() == 'BLINK':
+    elif data[0].strip() == 'BLINK':
         # registra no dicionário
         color[data[0].strip()] = data[1].strip()
 
     # se a chave for COR_BLINK
-    if data[0].strip() == 'COR_BLINK':
+    elif data[0].strip() == 'COR_BLINK':
         # registra no dicionário
         color[data[0].strip()] = data[1].strip()
 
     # se a chave for COR e o dicionário estiver totalmente populado
-    if data[0].strip() == 'COR' and len(color) >= 5:
+    elif data[0].strip() == 'COR' and len(color) >= 5:
 
         # iterando sobre o array de cores
         for c in colors:
