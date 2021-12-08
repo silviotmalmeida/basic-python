@@ -3,7 +3,7 @@
 # importando a biblioteca para checagem de números
 import checkNumbers
 
-# obtem a sugestão de letra
+# pergunta o cpf ao usuário
 cpf = input('Digite o CPF sem pontos ou traço: ')
 
 # validando a entrada
